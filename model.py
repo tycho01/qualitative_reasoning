@@ -1,7 +1,10 @@
-class Model():
+from dataclasses import dataclass
+from typing import Tuple
+from variables import MagnitudeValues
 
-    def __init__(self, dependency, value, Q1, Q2):
-        self.dependency = dependency
-        self.value = value
-        self.Q1 = Q1
-        self.Q2 = Q2
+@dataclass
+class Model:
+    dependency: str
+    value: MagnitudeValues
+    Q1: Tuple[str, str]
+    Q2: Tuple[str, str]
